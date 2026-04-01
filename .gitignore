@@ -1,0 +1,29 @@
+# OS
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor / IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment & secrets (if you add tooling later)
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Optional local tooling
+node_modules/
+dist/
+.cache/
+
+# Cursor / local agent artifacts (optional)
+.cursor/
