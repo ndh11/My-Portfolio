@@ -33,11 +33,36 @@ cd "My Portfolio"
 npx --yes serve -p 8080
 ```
 
+## GitHub
+
+This project is a normal Git repository. To publish updates:
+
+```bash
+git add -A
+git status   # review
+git commit -m "Your message"
+git push origin main
+```
+
+If `git push` returns **403 Permission denied**, your machine is authenticated as a different GitHub user than the repo owner. Fix it in one of these ways:
+
+1. **You own the repo elsewhere** — point `origin` at your repository and push:
+   ```bash
+   git remote set-url origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+   git push -u origin main
+   ```
+2. **Use SSH** — add an SSH key to GitHub, then:
+   ```bash
+   git remote set-url origin git@github.com:YOUR_USERNAME/YOUR_REPO.git
+   git push -u origin main
+   ```
+3. **GitHub CLI** — run `gh auth login`, then create or select the repo and push.
+
 ## Deployment
 
 This repo is static-file hosting friendly:
 
-- **GitHub Pages**: Repository Settings → Pages → Source: deploy from branch (e.g. `main` / root).
+- **GitHub Pages**: Repository **Settings → Pages** → Source: deploy from branch (e.g. `main` / **/** root folder).
 - **Netlify / Vercel**: Connect the repo; publish directory is the repository root (same folder as `index.html`).
 
 No environment variables or server-side code are required.
