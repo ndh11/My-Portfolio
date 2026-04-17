@@ -62,9 +62,29 @@
           </div>
         </div>
         <figure class="hero__photo-wrap" data-reveal>
-          <div class="hero__photo-frame" data-tilt>
-            <img src="assets/my-photo.jpeg" alt="Natasha Harris" width="560" height="640" loading="eager" />
-            <div class="hero__photo-shine" aria-hidden="true"></div>
+          <div class="hero__photo-stage">
+            <span class="hero__photo-blob hero__photo-blob--a" aria-hidden="true"></span>
+            <span class="hero__photo-blob hero__photo-blob--b" aria-hidden="true"></span>
+            <span class="hero__photo-grid" aria-hidden="true"></span>
+            <div class="hero__photo-frame" data-tilt>
+              <img src="assets/my-photo.jpeg" alt="Natasha Harris" width="560" height="640" loading="eager" />
+              <div class="hero__photo-shine" aria-hidden="true"></div>
+            </div>
+            <span class="hero__status" aria-hidden="true">
+              <span class="hero__status-dot"></span>
+              <span class="hero__status-label">Available · Remote</span>
+            </span>
+            <div class="hero__badge" aria-hidden="true">
+              <svg class="hero__badge-ring" viewBox="0 0 120 120">
+                <defs>
+                  <path id="heroBadgePath" d="M 60, 60 m -44, 0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0" />
+                </defs>
+                <text class="hero__badge-text">
+                  <textPath href="#heroBadgePath" startOffset="0">PRODUCT · AI · CREATIVE · OPS · PRODUCT · AI · CREATIVE · OPS · </textPath>
+                </text>
+              </svg>
+              <span class="hero__badge-core">★</span>
+            </div>
           </div>
           <figcaption class="hero__caption">Builder · Learner · Operator</figcaption>
         </figure>
