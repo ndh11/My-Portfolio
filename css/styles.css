@@ -1623,119 +1623,137 @@ a {
   background: linear-gradient(135deg, #20311d 0%, #3f6035 45%, #e8a07a 100%);
 }
 
-/* Portfolio project — editor/browser inspired art */
+/* Portfolio project — editorial, responsive art */
 .project-card__art--portfolio {
   background:
-    radial-gradient(1200px 400px at 110% -20%, rgba(120, 110, 210, 0.22), transparent 55%),
-    radial-gradient(900px 300px at -10% 120%, rgba(212, 93, 56, 0.28), transparent 55%),
-    linear-gradient(135deg, #1a1815 0%, #2a2522 55%, #3a2e26 100%);
+    radial-gradient(1000px 320px at 120% -25%, rgba(120, 110, 210, 0.28), transparent 55%),
+    radial-gradient(800px 260px at -10% 120%, rgba(212, 93, 56, 0.32), transparent 55%),
+    linear-gradient(135deg, #1a1815 0%, #2c2622 55%, #3a2e26 100%);
   overflow: hidden;
   isolation: isolate;
+  display: grid;
+  place-items: center;
   aspect-ratio: 16 / 9;
+  min-height: 220px;
 }
 
 .project-card__art-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(36px);
-  opacity: 0.65;
+  filter: blur(42px);
+  opacity: 0.6;
   pointer-events: none;
   will-change: transform;
+  z-index: 0;
 }
 
 .project-card__art-orb--a {
-  width: 52%;
+  width: 46%;
   aspect-ratio: 1;
-  top: -12%;
-  left: -10%;
+  top: -14%;
+  left: -8%;
   background: radial-gradient(circle at 40% 40%, rgba(212, 93, 56, 0.85), rgba(212, 93, 56, 0) 65%);
   animation: blobFloat 13s ease-in-out infinite;
 }
 
 .project-card__art-orb--b {
-  width: 42%;
+  width: 40%;
   aspect-ratio: 1;
-  bottom: -12%;
+  bottom: -14%;
   right: -8%;
   background: radial-gradient(circle at 60% 60%, rgba(120, 110, 210, 0.85), rgba(120, 110, 210, 0) 65%);
   animation: blobFloat 15s ease-in-out infinite reverse;
 }
 
-.project-card__art-window {
+.project-card__art-grid {
   position: absolute;
-  top: 10%;
-  left: 6%;
-  right: 6%;
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  padding: 0.55rem 0.85rem;
-  background: rgba(253, 250, 245, 0.95);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border-radius: 10px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
-  z-index: 1;
-}
-
-.project-card__art-dots {
-  display: inline-flex;
-  gap: 0.3rem;
-}
-
-.project-card__art-dots i {
-  display: block;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--line);
-}
-
-.project-card__art-dots i:nth-child(1) { background: #e06464; }
-.project-card__art-dots i:nth-child(2) { background: #e0b664; }
-.project-card__art-dots i:nth-child(3) { background: #64c178; }
-
-.project-card__art-url {
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: var(--ink-muted);
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-}
-
-.project-card__art-code {
-  position: absolute;
-  left: 8%;
-  bottom: 14%;
-  padding: 0.55rem 0.85rem;
-  background: rgba(20, 18, 15, 0.72);
-  color: #f5ede3;
-  border: 1px solid rgba(253, 250, 245, 0.14);
-  border-radius: 8px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.82rem;
-  letter-spacing: 0.02em;
-  z-index: 2;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
-}
-
-.project-card__art-code .tag   { color: #f3a26e; }
-.project-card__art-code .attr  { color: #a6d1ff; }
-.project-card__art-code .value { color: #ffd79a; }
-
-.project-card__art-mono {
-  position: absolute;
-  right: -3%;
-  bottom: -10%;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: clamp(7rem, 22vw, 14rem);
-  line-height: 0.8;
-  color: rgba(253, 250, 245, 0.08);
-  letter-spacing: -0.04em;
-  user-select: none;
-  pointer-events: none;
+  inset: 0;
   z-index: 0;
+  opacity: 0.14;
+  background-image:
+    linear-gradient(to right, rgba(253, 250, 245, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(253, 250, 245, 0.35) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(circle at 50% 55%, #000 35%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at 50% 55%, #000 35%, transparent 80%);
+  pointer-events: none;
+}
+
+/* URL chip (top-left) */
+.project-card__art-chip {
+  position: absolute;
+  top: clamp(0.6rem, 2.2vw, 1rem);
+  left: clamp(0.6rem, 2.2vw, 1rem);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: calc(100% - clamp(1.2rem, 4.4vw, 2rem));
+  padding: 0.4rem 0.75rem 0.4rem 0.6rem;
+  background: rgba(253, 250, 245, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: var(--radius-pill);
+  font-size: clamp(0.68rem, 1.4vw, 0.78rem);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--ink);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+}
+
+.project-card__art-chip-url {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.project-card__art-chip-dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1f9d55;
+  box-shadow: 0 0 0 4px rgba(31, 157, 85, 0.18);
+  animation: pulseDot 2.2s ease-in-out infinite;
+}
+
+/* Centered typographic display */
+.project-card__art-display {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: clamp(2.5rem, 8vw, 3.25rem) clamp(1rem, 4vw, 2rem) clamp(1rem, 3vw, 1.25rem);
+  max-width: 90%;
+}
+
+.project-card__art-kicker {
+  display: block;
+  font-size: clamp(0.65rem, 1.3vw, 0.78rem);
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(253, 250, 245, 0.55);
+  margin: 0 0 clamp(0.5rem, 1.5vw, 0.85rem);
+}
+
+.project-card__art-word {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 5.2vw, 2.75rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--bg);
+}
+
+.project-card__art-word em {
+  color: var(--accent);
+  font-style: italic;
+}
+
+/* Hover: the centered word nudges up a touch */
+.project-card:hover .project-card__art-display {
+  transform: translateY(-4px);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* Single-project layout */
@@ -1745,8 +1763,25 @@ a {
   margin: 0 auto;
 }
 
+.project-card--wide .project-card__inner {
+  display: block;
+}
+
 .project-card--wide .project-card__art {
   aspect-ratio: 16 / 9;
+  min-height: 220px;
+}
+
+.project-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.35rem;
+}
+
+.project-card__actions .btn {
+  padding: 0.7rem 1.1rem;
+  font-size: 0.875rem;
 }
 
 .project-card__list {

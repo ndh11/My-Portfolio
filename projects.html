@@ -53,23 +53,19 @@
     <section class="section section--tight projects">
       <ol class="project-grid project-grid--single" data-stagger data-project-grid>
         <li id="portfolio-project" class="project-card project-card--wide" data-reveal data-tilt data-category="product creative code">
-          <a class="project-card__inner" href="https://github.com/ndh11/My-Portfolio" target="_blank" rel="noopener" aria-label="Personal portfolio — source on GitHub">
-            <span class="project-card__status">Live · Source on GitHub</span>
+          <div class="project-card__inner">
             <div class="project-card__art project-card__art--portfolio" aria-hidden="true">
               <span class="project-card__art-orb project-card__art-orb--a"></span>
               <span class="project-card__art-orb project-card__art-orb--b"></span>
-              <div class="project-card__art-window">
-                <span class="project-card__art-dots">
-                  <i></i><i></i><i></i>
-                </span>
-                <span class="project-card__art-url">natasha.dev/portfolio</span>
+              <span class="project-card__art-grid"></span>
+              <div class="project-card__art-chip">
+                <span class="project-card__art-chip-dot"></span>
+                <span class="project-card__art-chip-url">natashaharrisportfolio.netlify.app</span>
               </div>
-              <div class="project-card__art-code">
-                <span class="tag">&lt;portfolio</span>
-                <span class="attr">style</span>=<span class="value">"handmade"</span>
-                <span class="tag">/&gt;</span>
+              <div class="project-card__art-display">
+                <span class="project-card__art-kicker">Portfolio · 2026 · Hand-coded</span>
+                <span class="project-card__art-word">Hi, I’m <em>Natasha.</em></span>
               </div>
-              <div class="project-card__art-mono" aria-hidden="true">NH</div>
             </div>
             <div class="project-card__body">
               <div class="project-card__tags">
@@ -79,16 +75,19 @@
               <p class="project-card__desc">
                 Designed and built from scratch in HTML, CSS, and JavaScript—no frameworks. Kinetic typography,
                 scroll-driven reveals, 3D card tilts, a spinning brand badge, animated counters, and motion that
-                respects <code>prefers-reduced-motion</code>. Deployed as a static site, shipped from the repo.
+                respects <code>prefers-reduced-motion</code>. Deployed as a static site on Netlify, versioned on GitHub.
               </p>
               <ul class="project-card__list">
                 <li>Hand-authored HTML, CSS, and vanilla JS (no framework)</li>
                 <li>Responsive across desktop and mobile with accessible motion</li>
-                <li>Versioned on GitHub, deployable to any static host</li>
+                <li>Deployed to Netlify, source public on GitHub</li>
               </ul>
-              <p class="project-card__meta">2026 · github.com/ndh11/My-Portfolio ↗</p>
+              <div class="project-card__actions">
+                <a class="btn btn--primary" href="https://natashaharrisportfolio.netlify.app/" target="_blank" rel="noopener" data-magnetic>Visit live site ↗</a>
+                <a class="btn btn--ghost" href="https://github.com/ndh11/My-Portfolio" target="_blank" rel="noopener" data-magnetic>View source ↗</a>
+              </div>
             </div>
-          </a>
+          </div>
         </li>
       </ol>
 
