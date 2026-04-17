@@ -750,9 +750,9 @@ a {
 
 .hero__badge-text {
   font-family: var(--font-body);
-  font-size: 10.5px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.05em;
   fill: var(--bg);
 }
 
