@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Natasha Harris — Product Developer & Manager. EdTech, AI workflows, and data-driven product leadership." />
-  <title>Natasha Harris · Product Developer & Manager</title>
+  <meta name="description" content="Natasha Harris — Product Development, EdTech, AI &amp; automation, content &amp; operations. 40+ courses shipped; BigQuery, AI workflows, remote team leadership." />
+  <title>Natasha Harris · Product Development · EdTech</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
@@ -12,6 +12,8 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" data-progress aria-hidden="true"></div>
+  <div class="cursor-glow" data-cursor aria-hidden="true"></div>
 
   <header class="site-header" data-header>
     <div class="header-inner">
@@ -33,25 +35,43 @@
     <section id="home" class="hero section">
       <div class="hero__grid">
         <div class="hero__copy" data-reveal>
-          <p class="eyebrow">Ahwatukee, Arizona</p>
+          <p class="eyebrow">Remote · Building with CodaKid</p>
+          <p class="hero__tagline">Product Development · EdTech · AI &amp; Automation · Content &amp; Operations</p>
           <h1 class="hero__title">
-            Hi, I’m <span class="hero__name">Natasha.</span><br />
-            Product developer <span class="hero__amp">&amp;</span> manager.
+            Hi, I’m <span class="hero__name" data-split>Natasha.</span><br />
+            <span class="hero__subline">
+              I build
+              <span class="rotator" data-rotator aria-live="polite">
+                <span class="rotator__word is-active">products</span>
+                <span class="rotator__word">curriculum</span>
+                <span class="rotator__word">AI workflows</span>
+                <span class="rotator__word">data stories</span>
+                <span class="rotator__word">learning brands</span>
+              </span>
+              <span class="hero__subline-tail">that teach.</span>
+            </span>
           </h1>
           <p class="hero__lede">
-            I build educational technology at scale—curriculum to AI pipelines, video to paid media—with
-            outcomes you can measure. Currently Head of Product Development at CodaKid.
+            Range, on purpose. I move between product, AI, data, curriculum, video, and growth—picking up whatever the
+            work needs next and shipping fast. 3+ years in EdTech, 40+ courses launched, a remote team in motion, and
+            decisions grounded in BigQuery and Looker Studio.
           </p>
+          <ul class="hero__traits">
+            <li><span>Multi-disciplinary</span> by design</li>
+            <li><span>Fast learner</span> by habit</li>
+            <li><span>Outcome-driven</span> by default</li>
+          </ul>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#impact">Explore recent work</a>
-            <a class="btn btn--ghost" href="#about">Learn more about me</a>
+            <a class="btn btn--primary" href="#impact" data-magnetic>Explore recent work</a>
+            <a class="btn btn--ghost" href="#about" data-magnetic>Learn more about me</a>
           </div>
         </div>
         <figure class="hero__photo-wrap" data-reveal>
-          <div class="hero__photo-frame">
+          <div class="hero__photo-frame" data-tilt>
             <img src="assets/my-photo.jpeg" alt="Natasha Harris" width="560" height="640" loading="eager" />
+            <div class="hero__photo-shine" aria-hidden="true"></div>
           </div>
-          <figcaption class="hero__caption">Building products that teach—and scale.</figcaption>
+          <figcaption class="hero__caption">Builder · Learner · Operator</figcaption>
         </figure>
       </div>
       <div class="hero__marquee" aria-hidden="true">
@@ -63,49 +83,70 @@
       </div>
     </section>
 
+    <section class="section section--tight stats" aria-label="Impact at a glance">
+      <ul class="stats__grid" data-reveal>
+        <li class="stats__item" data-count="40" data-suffix="+">
+          <span class="stats__number" data-count-target>0</span>
+          <span class="stats__label">Courses shipped</span>
+        </li>
+        <li class="stats__item" data-count="3" data-suffix="+ yrs">
+          <span class="stats__number" data-count-target>0</span>
+          <span class="stats__label">In EdTech</span>
+        </li>
+        <li class="stats__item" data-count="400" data-suffix="+">
+          <span class="stats__number" data-count-target>0</span>
+          <span class="stats__label">Students supported</span>
+        </li>
+        <li class="stats__item" data-count="100" data-suffix="%">
+          <span class="stats__number" data-count-target>0</span>
+          <span class="stats__label">Compliance record</span>
+        </li>
+      </ul>
+    </section>
+
     <section id="impact" class="section section--tight">
       <div class="section__head" data-reveal>
         <p class="eyebrow">Selected impact</p>
-        <h2 class="section__title">How I turn complex product problems into shipped learning experiences.</h2>
+        <h2 class="section__title">From curriculum to analytics—the work behind 40+ shipped courses.</h2>
         <p class="section__sub">
-          A snapshot of the work behind 40+ courses, automation systems, and cross-functional delivery—not generic case studies, but the real through-line in my role.
+          Highlights aligned with my resume: end-to-end delivery, AI-powered production, data-informed iteration, and remote team execution.
         </p>
       </div>
-      <div class="cards cards--3">
-        <article class="card card--lift" data-reveal>
+      <div class="cards cards--3" data-stagger>
+        <article class="card card--lift" data-reveal data-tilt>
           <span class="card__tag">CodaKid · Product</span>
           <h3 class="card__title">Curriculum &amp; AI at scale</h3>
           <p class="card__body">
-            Led end-to-end development of 40+ K–12 coding and AI courses—architecture through QA, platform delivery,
-            and iteration—while designing AI-assisted production pipelines with ChatGPT, Claude, and Gemini.
+            Shipped 40+ K–12 coding and AI courses end-to-end, owning the full lifecycle from curriculum design through
+            QA, platform delivery, and post-launch iteration—plus AI-powered production workflows with ChatGPT, Claude, and Gemini.
           </p>
           <ul class="card__list">
-            <li>Make.com &amp; Zapier automations across operations</li>
-            <li>Hands-on Python, Lua, and web in content &amp; QA</li>
+            <li>Make.com &amp; Zapier across publishing, QA tracking, and team coordination</li>
+            <li>Python, SQL, and AI/ML tools alongside hands-on curriculum and QA</li>
           </ul>
         </article>
-        <article class="card card--lift" data-reveal>
+        <article class="card card--lift" data-reveal data-tilt>
           <span class="card__tag">Data &amp; marketing</span>
           <h3 class="card__title">Evidence-led roadmap</h3>
           <p class="card__body">
-            Tracked learner and product performance in BigQuery and Looker Studio to spot drop-offs, reshape modules,
-            and prioritize what actually moves outcomes.
+            Analyzed learner performance in BigQuery and Looker Studio to identify drop-off patterns; restructured
+            underperforming modules to improve course completion rates.
           </p>
           <ul class="card__list">
-            <li>A/B testing, dashboards, product metrics</li>
-            <li>Meta &amp; Google Ads, GHL lifecycle email</li>
+            <li>Dashboards, A/B testing, and product metrics</li>
+            <li>Paid acquisition (Meta &amp; Google Ads) and lifecycle email via Go High Level</li>
           </ul>
         </article>
-        <article class="card card--lift" data-reveal>
+        <article class="card card--lift" data-reveal data-tilt>
           <span class="card__tag">Leadership</span>
           <h3 class="card__title">Remote teams that ship</h3>
           <p class="card__body">
-            Managed video and course development in ClickUp and Notion—sprint cycles, IT coordination, and timelines
-            across a fully remote team.
+            Managed a remote team across video production and course development; ran sprint cycles in ClickUp and
+            Notion, consistently hitting delivery deadlines.
           </p>
           <ul class="card__list">
-            <li>Stakeholder management &amp; roadmapping</li>
-            <li>Creative production with Adobe &amp; Canva</li>
+            <li>Stakeholder management, OKRs, and roadmapping</li>
+            <li>Creative assets in Adobe Creative Suite and Canva</li>
           </ul>
         </article>
       </div>
@@ -123,42 +164,54 @@
     <section id="skills" class="section">
       <div class="section__head" data-reveal>
         <p class="eyebrow">Skills &amp; tools</p>
-        <h2 class="section__title">A builder’s stack—from ops to AI to analytics.</h2>
+        <h2 class="section__title">Same categories as my resume—from ops to AI to analytics.</h2>
       </div>
-      <div class="skill-groups" data-reveal>
+      <div class="skill-groups" data-reveal data-stagger>
         <div class="skill-group">
-          <h3 class="skill-group__label">Product &amp; operations</h3>
+          <h3 class="skill-group__label">Product &amp; Ops</h3>
           <div class="pills">
-            <span>ClickUp</span><span>Notion</span><span>Linear</span><span>Sprints</span><span>OKRs</span><span>Roadmapping</span>
+            <span>ClickUp</span><span>Notion</span><span>Linear</span><span>Sprint planning</span><span>OKRs</span><span>Roadmapping</span><span>Stakeholder management</span>
           </div>
         </div>
         <div class="skill-group">
-          <h3 class="skill-group__label">AI &amp; automation</h3>
+          <h3 class="skill-group__label">AI &amp; Automation</h3>
           <div class="pills">
-            <span>Make.com</span><span>Zapier</span><span>n8n</span><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Vertex AI</span><span>Cursor</span>
+            <span>Make.com</span><span>Zapier</span><span>n8n</span><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Vertex AI</span><span>Cursor</span><span>Prompt engineering</span><span>Workflow design</span>
           </div>
         </div>
         <div class="skill-group">
-          <h3 class="skill-group__label">Data &amp; analytics</h3>
+          <h3 class="skill-group__label">Data &amp; Analytics</h3>
           <div class="pills">
-            <span>BigQuery (SQL)</span><span>Looker Studio</span><span>Sheets</span><span>A/B tests</span><span>Dashboards</span>
+            <span>BigQuery (SQL)</span><span>Looker Studio</span><span>Google Sheets</span><span>A/B testing</span><span>Dashboards</span><span>Product metrics</span>
           </div>
         </div>
         <div class="skill-group">
-          <h3 class="skill-group__label">Curriculum &amp; creative</h3>
+          <h3 class="skill-group__label">Curriculum &amp; L&amp;D</h3>
           <div class="pills">
-            <span>Instructional design</span><span>Teachable</span><span>Thinkific</span><span>Premiere</span><span>Photoshop</span><span>Illustrator</span><span>Canva</span>
+            <span>Instructional design</span><span>Course architecture</span><span>Teachable</span><span>Thinkific</span><span>Google Classroom</span><span>Loom</span>
           </div>
         </div>
         <div class="skill-group">
-          <h3 class="skill-group__label">Growth &amp; technical</h3>
+          <h3 class="skill-group__label">Creative &amp; Video</h3>
           <div class="pills">
-            <span>Meta Ads</span><span>Google Ads</span><span>Go High Level</span><span>Python</span><span>Lua</span><span>React</span><span>GitHub</span>
+            <span>Adobe Premiere Pro</span><span>Photoshop</span><span>Illustrator</span><span>InDesign</span><span>Canva</span><span>On-camera production</span><span>Storyboarding</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__label">Marketing</h3>
+          <div class="pills">
+            <span>Meta Ads</span><span>Google Ads</span><span>Go High Level</span><span>Lifecycle email</span><span>Content strategy</span><span>SEO</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__label">Technical</h3>
+          <div class="pills">
+            <span>Python</span><span>Lua</span><span>React</span><span>GitHub</span><span>VS Code</span><span>Cursor</span>
           </div>
         </div>
       </div>
       <p class="cert-note" data-reveal>
-        <strong>Certification:</strong> Google Cloud — Derive Insights from BigQuery Data (Skills Boost, 2026)
+        <strong>Certifications:</strong> Google Cloud — Derive Insights from BigQuery Data · Google Cloud Skills Boost, 2026
       </p>
     </section>
 
@@ -167,7 +220,7 @@
         <p class="eyebrow">Experience</p>
         <h2 class="section__title">Roles that blended teaching, systems, and product craft.</h2>
       </div>
-      <ol class="timeline" data-reveal>
+      <ol class="timeline" data-reveal data-timeline>
         <li class="timeline__item">
           <div class="timeline__marker" aria-hidden="true"></div>
           <div class="timeline__content">
@@ -177,10 +230,12 @@
               <span class="timeline__dates">April 2023 – Present</span>
             </header>
             <ul class="timeline__bullets">
-              <li>Owned 40+ K–12 coding &amp; AI courses end-to-end—from curriculum through QA, delivery, and iteration.</li>
-              <li>Built AI workflows and automations that reduced manual work across production and operations.</li>
-              <li>Partnered with engineering on platform improvements; used BigQuery &amp; Looker for roadmap decisions.</li>
-              <li>Ran marketing ops: paid social, search, and lifecycle programs with creative production in Adobe &amp; Canva.</li>
+              <li>Shipped 40+ K–12 coding and AI courses end-to-end, owning the full lifecycle from curriculum design through QA, platform delivery, and post-launch iteration.</li>
+              <li>Built AI-powered production workflows using ChatGPT, Claude, and Gemini that improved course production speed and eliminated repetitive content formatting tasks.</li>
+              <li>Implemented Make.com and Zapier automations across content publishing, QA tracking, and team coordination, streamlining operations and freeing up significant time for higher-value work.</li>
+              <li>Analyzed learner performance data in BigQuery and Looker Studio to identify drop-off patterns; restructured underperforming modules to improve course completion rates.</li>
+              <li>Managed a remote team across video production and course development; ran sprint cycles in ClickUp and Notion, consistently hitting delivery deadlines.</li>
+              <li>Ran paid acquisition across Meta Ads and Google Ads; managed lifecycle email automation via Go High Level and produced all creative assets in Adobe Creative Suite and Canva.</li>
             </ul>
           </div>
         </li>
@@ -193,9 +248,9 @@
               <span class="timeline__dates">May 2022 – April 2023</span>
             </header>
             <ul class="timeline__bullets">
-              <li>Managed CTE programs and certification pathways for 400+ students—scheduling, compliance, logistics.</li>
-              <li>Administered certification exams with zero compliance violations; coordinated external partners.</li>
-              <li>Built instructional materials and reporting in Adobe &amp; Google Workspace.</li>
+              <li>Managed career and technical education programs across multiple certification pathways serving 400+ students; oversaw scheduling, compliance, and program logistics end-to-end.</li>
+              <li>Administered industry-standard certification exams with a 100% compliance record; coordinated directly with external certification bodies and district administrators.</li>
+              <li>Designed instructional materials and streamlined student data tracking using Adobe Creative Suite and Google Workspace, reducing administrative overhead.</li>
             </ul>
           </div>
         </li>
@@ -208,8 +263,8 @@
               <span class="timeline__dates">August 2016 – May 2021</span>
             </header>
             <ul class="timeline__bullets">
-              <li>Facilitated youth programs balancing creative, educational, and physical activities to state standards.</li>
-              <li>Supervised staff and participants; managed scheduling, attendance, and documentation.</li>
+              <li>Led structured youth programming for multiple age groups, balancing creative, educational, and physical activities while maintaining full compliance with state safety standards.</li>
+              <li>Supervised staff and participants across concurrent programs; managed scheduling, attendance, and incident documentation.</li>
             </ul>
           </div>
         </li>
@@ -222,17 +277,13 @@
           <p class="eyebrow">About</p>
           <h2 class="section__title">Learning products are my through-line.</h2>
           <p class="prose">
-            I’m a product development professional with 3+ years shipping educational technology—bridging curriculum
-            architecture, AI systems, video, paid media, and analytics. English (native) and French (A2).
+            Same profile as my resume: EdTech at scale, 40+ courses shipped, and a mix of technical depth (Python, SQL,
+            AI/ML tools) with product strategy and creative production on remote teams.
           </p>
           <div class="about__meta">
             <div>
               <span class="meta-label">Education</span>
-              <p>B.A. with minor in Project Management — University of Maine at Presque Isle, 2025</p>
-            </div>
-            <div>
-              <span class="meta-label">Academic honors</span>
-              <p>4.0 GPA</p>
+              <p>Bachelor of Arts, Minor: Project Management — University of Maine, Presque Isle, 2025</p>
             </div>
           </div>
         </div>
@@ -256,10 +307,14 @@
           Whether you’re hiring for product in EdTech or want to compare notes on AI ops, I’d love to hear from you.
         </p>
         <div class="contact__actions">
-          <a class="btn btn--primary" href="mailto:Natharris2000@yahoo.com">Email me</a>
-          <a class="btn btn--ghost" href="tel:+14807078857">Call 480-707-8857</a>
+          <a class="btn btn--primary" href="mailto:natharris2000@yahoo.com" data-magnetic>Email me</a>
+          <a class="btn btn--ghost" href="tel:+14807078857" data-magnetic>Call 480-707-8857</a>
         </div>
-        <p class="contact__fineprint">Based in Ahwatukee, Arizona · Remote-friendly</p>
+        <ul class="contact__links" data-reveal>
+          <li><a href="https://www.linkedin.com/in/natasha-harris-" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+          <li><a href="https://natashsaharrisportfolio.netlify.app/" rel="noopener noreferrer" target="_blank">Live portfolio (Netlify)</a></li>
+        </ul>
+        <p class="contact__fineprint">Remote · Contact details match my resume header</p>
       </div>
     </section>
   </main>
