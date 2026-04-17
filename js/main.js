@@ -332,41 +332,6 @@
     });
   }
 
-  // Skills — filter highlights a discipline row, dims the rest
-  var skillFilters = document.querySelectorAll("[data-skill-filters] .skill-filter");
-  var skillRows = document.querySelectorAll("[data-skill-rows] .skill-row");
-  var skillsCountEl = document.querySelector("[data-skills-count]");
-  if (skillFilters.length && skillRows.length) {
-    skillFilters.forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        var filter = btn.getAttribute("data-filter") || "all";
-        skillFilters.forEach(function (b) {
-          b.classList.toggle("is-active", b === btn);
-        });
-        var toolsInMatch = 0;
-        skillRows.forEach(function (row) {
-          var rowKey = row.getAttribute("data-skill-row") || "";
-          var match = filter === "all" || rowKey === filter;
-          row.classList.toggle("is-dimmed", filter !== "all" && !match);
-          row.classList.toggle("is-highlighted", filter !== "all" && match);
-          if (match) {
-            var countEl = row.querySelector(".skill-row__count");
-            if (countEl) toolsInMatch += parseInt(countEl.textContent, 10) || 0;
-          }
-        });
-        if (skillsCountEl) {
-          if (filter === "all") {
-            skillsCountEl.textContent = "29 tools across 7 disciplines.";
-          } else {
-            var label = btn.querySelector(".skill-filter__label");
-            var name = label ? label.textContent.trim() : filter;
-            skillsCountEl.textContent = toolsInMatch + " in " + name + ".";
-          }
-        }
-      });
-    });
-  }
-
   // Projects filters
   var filterBtns = document.querySelectorAll("[data-filters] .filter");
   var projectCards = document.querySelectorAll("[data-project-grid] .project-card");
