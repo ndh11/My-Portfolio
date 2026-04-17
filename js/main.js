@@ -332,33 +332,35 @@
     });
   }
 
-  // Skills cloud — filter + live count
+  // Skills — filter highlights a discipline row, dims the rest
   var skillFilters = document.querySelectorAll("[data-skill-filters] .skill-filter");
-  var skillPills = document.querySelectorAll("[data-skill-pills] .skill-pill");
+  var skillRows = document.querySelectorAll("[data-skill-rows] .skill-row");
   var skillsCountEl = document.querySelector("[data-skills-count]");
-  var totalSkills = skillPills.length;
-  if (skillFilters.length && skillPills.length) {
+  if (skillFilters.length && skillRows.length) {
     skillFilters.forEach(function (btn) {
       btn.addEventListener("click", function () {
         var filter = btn.getAttribute("data-filter") || "all";
         skillFilters.forEach(function (b) {
           b.classList.toggle("is-active", b === btn);
         });
-        var shown = 0;
-        skillPills.forEach(function (pill, i) {
-          var skill = pill.getAttribute("data-skill") || "";
-          var match = filter === "all" || skill === filter;
-          pill.classList.toggle("is-dimmed", filter !== "all" && !match);
-          pill.classList.toggle("is-highlighted", filter !== "all" && match);
-          if (match) shown += 1;
+        var toolsInMatch = 0;
+        skillRows.forEach(function (row) {
+          var rowKey = row.getAttribute("data-skill-row") || "";
+          var match = filter === "all" || rowKey === filter;
+          row.classList.toggle("is-dimmed", filter !== "all" && !match);
+          row.classList.toggle("is-highlighted", filter !== "all" && match);
+          if (match) {
+            var countEl = row.querySelector(".skill-row__count");
+            if (countEl) toolsInMatch += parseInt(countEl.textContent, 10) || 0;
+          }
         });
         if (skillsCountEl) {
           if (filter === "all") {
-            skillsCountEl.textContent = totalSkills + " tools across 7 disciplines.";
+            skillsCountEl.textContent = "29 tools across 7 disciplines.";
           } else {
             var label = btn.querySelector(".skill-filter__label");
             var name = label ? label.textContent.trim() : filter;
-            skillsCountEl.textContent = shown + " in " + name + ".";
+            skillsCountEl.textContent = toolsInMatch + " in " + name + ".";
           }
         }
       });

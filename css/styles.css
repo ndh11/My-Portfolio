@@ -1209,78 +1209,119 @@ a {
   color: rgba(253, 250, 245, 0.7);
 }
 
-/* Tag grid */
-.skills-cloud__pills {
+/* Editorial skill rows — one row per discipline, no bubbles */
+.skill-rows {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
+  display: grid;
+  gap: 0;
 }
 
-.skill-pill {
+.skill-row {
   --dot: var(--accent);
+  display: grid;
+  grid-template-columns: minmax(220px, 0.9fr) 2fr;
+  gap: 1.5rem 2rem;
+  align-items: baseline;
+  padding: 1.15rem 0.25rem 1.15rem 0;
+  border-top: 1px solid var(--line);
+  transition: opacity 0.3s ease, background 0.25s ease;
+}
+
+.skill-row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.skill-row[data-skill-row="product"]   { --dot: #d45d38; }
+.skill-row[data-skill-row="ai"]        { --dot: #7e6bd0; }
+.skill-row[data-skill-row="data"]      { --dot: #3e8ecf; }
+.skill-row[data-skill-row="content"]   { --dot: #3e9b5e; }
+.skill-row[data-skill-row="creative"]  { --dot: #e59a3a; }
+.skill-row[data-skill-row="marketing"] { --dot: #cf4a6b; }
+.skill-row[data-skill-row="technical"] { --dot: #6b7280; }
+
+.skill-row__head {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  padding: 0.38rem 0.8rem;
-  border-radius: var(--radius-pill);
-  background: transparent;
-  border: 1px solid var(--line);
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: var(--ink);
-  cursor: default;
-  white-space: nowrap;
-  transition:
-    opacity 0.3s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
-    background 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease;
+  gap: 0.65rem;
+  min-width: 0;
 }
 
-.skill-pill[data-skill="product"]   { --dot: #d45d38; }
-.skill-pill[data-skill="ai"]        { --dot: #7e6bd0; }
-.skill-pill[data-skill="data"]      { --dot: #3e8ecf; }
-.skill-pill[data-skill="content"]   { --dot: #3e9b5e; }
-.skill-pill[data-skill="creative"]  { --dot: #e59a3a; }
-.skill-pill[data-skill="marketing"] { --dot: #cf4a6b; }
-.skill-pill[data-skill="technical"] { --dot: #6b7280; }
-
-.skill-pill__dot {
-  display: block;
-  width: 6px;
-  height: 6px;
+.skill-row__dot {
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: var(--dot);
   flex-shrink: 0;
-  transition: transform 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.skill-pill:hover {
-  border-color: var(--dot);
+.skill-row__title {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.skill-row__count {
+  margin-left: auto;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.skill-row__tools {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  word-break: break-word;
+}
+
+.skill-row:hover {
+  background: color-mix(in srgb, var(--dot) 5%, transparent);
+}
+
+.skill-row:hover .skill-row__dot {
+  transform: scale(1.25);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--dot) 18%, transparent);
+}
+
+.skill-row.is-dimmed {
+  opacity: 0.28;
+}
+
+.skill-row.is-highlighted {
   background: color-mix(in srgb, var(--dot) 8%, transparent);
 }
 
-.skill-pill:hover .skill-pill__dot {
-  transform: scale(1.35);
+.skill-row.is-highlighted .skill-row__dot {
+  transform: scale(1.3);
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--dot) 22%, transparent);
 }
 
-.skill-pill.is-dimmed {
-  opacity: 0.3;
+.skill-row.is-highlighted .skill-row__title {
+  color: var(--dot);
 }
 
-.skill-pill.is-highlighted {
-  background: var(--ink);
-  color: var(--bg);
-  border-color: var(--ink);
-}
-
-.skill-pill.is-highlighted .skill-pill__dot {
-  background: var(--dot);
-  transform: scale(1.2);
+@media (max-width: 640px) {
+  .skill-row {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+    padding: 1rem 0.25rem;
+  }
+  .skill-row__count {
+    margin-left: auto;
+  }
+  .skill-row__tools {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 520px) {
@@ -1291,16 +1332,12 @@ a {
   .skill-filter__count {
     display: none;
   }
-  .skill-pill {
-    padding: 0.35rem 0.7rem;
-    font-size: 0.78rem;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .skill-pill,
-  .skill-filter,
-  .skill-pill__dot {
+  .skill-row,
+  .skill-row__dot,
+  .skill-filter {
     transition: none;
   }
 }
