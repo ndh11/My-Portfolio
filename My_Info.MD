@@ -42,6 +42,7 @@ Use exact bullets from `Natasha Harris Resume.docx` (PROFILE, EXPERIENCE, SKILLS
 ## Education (resume)
 Bachelor of Arts, Minor: Project Management
 University of Maine, Presque Isle, 2025
+Summa Cum Laude · 4.0 GPA
 
 ## Pages Needed
 Home · Work · About · Contact
