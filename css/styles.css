@@ -463,20 +463,24 @@ a {
 @media (max-width: 900px) {
   .hero__grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
   }
-  /* Pull the photo up visually so the hero reads as one composition */
+  /* Photo appears above the copy on mobile */
   .hero__photo-wrap {
+    order: 1;
+  }
+  .hero__copy {
     order: 2;
   }
 }
 
 @media (max-width: 540px) {
   .hero {
+    padding-top: 1.5rem;
     padding-bottom: 1.25rem;
   }
   .hero__grid {
-    gap: 2.25rem;
+    gap: 1.75rem;
   }
   .hero__title {
     font-size: clamp(2.25rem, 10vw, 2.75rem);
@@ -563,8 +567,14 @@ a {
 @media (max-width: 900px) {
   .hero__photo-wrap {
     justify-self: center;
-    max-width: 420px;
+    max-width: 380px;
     width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero__photo-wrap {
+    max-width: 320px;
   }
 }
 
