@@ -279,6 +279,31 @@
     });
   }
 
+  // Projects filters
+  var filterBtns = document.querySelectorAll("[data-filters] .filter");
+  var projectCards = document.querySelectorAll("[data-project-grid] .project-card");
+  var emptyMsg = document.querySelector("[data-empty]");
+  if (filterBtns.length && projectCards.length) {
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var filter = btn.getAttribute("data-filter") || "all";
+        filterBtns.forEach(function (b) {
+          b.classList.toggle("is-active", b === btn);
+        });
+        var shown = 0;
+        projectCards.forEach(function (card) {
+          var cats = (card.getAttribute("data-category") || "").split(/\s+/);
+          var match = filter === "all" || cats.indexOf(filter) !== -1;
+          card.classList.toggle("is-hidden", !match);
+          if (match) shown += 1;
+        });
+        if (emptyMsg) {
+          emptyMsg.hidden = shown !== 0;
+        }
+      });
+    });
+  }
+
   window.addEventListener("scroll", updateScroll, { passive: true });
   window.addEventListener("resize", updateScroll);
   updateScroll();
