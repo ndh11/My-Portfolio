@@ -1042,6 +1042,182 @@ a {
 }
 
 /* Skills */
+/* Skills cloud — interactive filter + category-colored pills */
+.skills-meta {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.18rem 0.55rem;
+  border-radius: var(--radius-pill);
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.skills-cloud {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.skills-cloud__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 0.9rem 0.55rem 0.75rem;
+  border: 1px solid var(--line);
+  background: transparent;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-filter__swatch {
+  --swatch: var(--ink);
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--swatch);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--swatch) 18%, transparent);
+}
+
+.skill-filter__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.6rem;
+  height: 1.4rem;
+  padding: 0 0.45rem;
+  border-radius: var(--radius-pill);
+  background: var(--bg-elevated);
+  color: var(--ink-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.skill-filter:hover {
+  border-color: var(--ink);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(20, 18, 15, 0.06);
+}
+
+.skill-filter.is-active {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(20, 18, 15, 0.18);
+}
+
+.skill-filter.is-active .skill-filter__count {
+  background: rgba(253, 250, 245, 0.18);
+  color: var(--bg);
+}
+
+.skill-filter.is-active .skill-filter__swatch {
+  box-shadow: 0 0 0 2px rgba(253, 250, 245, 0.25);
+}
+
+.skills-cloud__pills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.skill-pill {
+  --dot: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-pill);
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink);
+  cursor: default;
+  transition:
+    opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.skill-pill[data-skill="product"]   { --dot: #d45d38; }
+.skill-pill[data-skill="ai"]        { --dot: #7e6bd0; }
+.skill-pill[data-skill="data"]      { --dot: #3e8ecf; }
+.skill-pill[data-skill="content"]   { --dot: #3e9b5e; }
+.skill-pill[data-skill="creative"]  { --dot: #e59a3a; }
+.skill-pill[data-skill="marketing"] { --dot: #cf4a6b; }
+.skill-pill[data-skill="technical"] { --dot: #6b7280; }
+
+.skill-pill__dot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--dot);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--dot) 15%, transparent);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-pill:hover {
+  transform: translateY(-2px);
+  border-color: var(--dot);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--dot) 18%, transparent);
+}
+
+.skill-pill:hover .skill-pill__dot {
+  transform: scale(1.25);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--dot) 22%, transparent);
+}
+
+.skill-pill.is-dimmed {
+  opacity: 0.28;
+  transform: scale(0.94);
+  filter: saturate(0.5);
+}
+
+.skill-pill.is-highlighted {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--dot) 30%, transparent);
+}
+
+.skill-pill.is-highlighted .skill-pill__dot {
+  box-shadow: 0 0 0 3px rgba(253, 250, 245, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-pill,
+  .skill-filter {
+    transition: none;
+  }
+}
+
+/* Legacy skill group styles kept for any other pages */
 .skill-groups {
   display: grid;
   gap: 1.75rem;

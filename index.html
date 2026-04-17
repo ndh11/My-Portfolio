@@ -178,50 +178,92 @@
       <div class="section__head" data-reveal>
         <p class="eyebrow">Skills &amp; tools</p>
         <h2 class="section__title">The stack behind the work—ops, AI, data, and craft.</h2>
+        <p class="section__sub">
+          Tap a discipline to filter. <span class="skills-meta" data-skills-count>29 tools across 7 disciplines.</span>
+        </p>
       </div>
-      <div class="skill-groups" data-reveal data-stagger>
-        <div class="skill-group">
-          <h3 class="skill-group__label">Product &amp; Ops</h3>
-          <div class="pills">
-            <span>ClickUp</span><span>Notion</span><span>Linear</span><span>Sprint planning</span><span>Roadmapping</span>
-          </div>
+
+      <div class="skills-cloud" data-reveal>
+        <div class="skills-cloud__filters" data-skill-filters role="tablist" aria-label="Filter skills by discipline">
+          <button type="button" class="skill-filter is-active" data-filter="all">
+            <span class="skill-filter__swatch" style="--swatch: var(--ink)"></span>
+            <span class="skill-filter__label">All</span>
+            <span class="skill-filter__count">29</span>
+          </button>
+          <button type="button" class="skill-filter" data-filter="product">
+            <span class="skill-filter__swatch" style="--swatch: #d45d38"></span>
+            <span class="skill-filter__label">Product &amp; Ops</span>
+            <span class="skill-filter__count">5</span>
+          </button>
+          <button type="button" class="skill-filter" data-filter="ai">
+            <span class="skill-filter__swatch" style="--swatch: #7e6bd0"></span>
+            <span class="skill-filter__label">AI &amp; Automation</span>
+            <span class="skill-filter__count">6</span>
+          </button>
+          <button type="button" class="skill-filter" data-filter="data">
+            <span class="skill-filter__swatch" style="--swatch: #3e8ecf"></span>
+            <span class="skill-filter__label">Data</span>
+            <span class="skill-filter__count">4</span>
+          </button>
+          <button type="button" class="skill-filter" data-filter="content">
+            <span class="skill-filter__swatch" style="--swatch: #3e9b5e"></span>
+            <span class="skill-filter__label">Content &amp; L&amp;D</span>
+            <span class="skill-filter__count">4</span>
+          </button>
+          <button type="button" class="skill-filter" data-filter="creative">
+            <span class="skill-filter__swatch" style="--swatch: #e59a3a"></span>
+            <span class="skill-filter__label">Creative</span>
+            <span class="skill-filter__count">3</span>
+          </button>
+          <button type="button" class="skill-filter" data-filter="marketing">
+            <span class="skill-filter__swatch" style="--swatch: #cf4a6b"></span>
+            <span class="skill-filter__label">Marketing</span>
+            <span class="skill-filter__count">3</span>
+          </button>
+          <button type="button" class="skill-filter" data-filter="technical">
+            <span class="skill-filter__swatch" style="--swatch: #6b7280"></span>
+            <span class="skill-filter__label">Technical</span>
+            <span class="skill-filter__count">4</span>
+          </button>
         </div>
-        <div class="skill-group">
-          <h3 class="skill-group__label">AI &amp; Automation</h3>
-          <div class="pills">
-            <span>Make.com</span><span>Zapier</span><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Cursor</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-group__label">Data &amp; Analytics</h3>
-          <div class="pills">
-            <span>SQL</span><span>Dashboards</span><span>A/B testing</span><span>Product metrics</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-group__label">Content &amp; L&amp;D</h3>
-          <div class="pills">
-            <span>Instructional design</span><span>Course architecture</span><span>LMS platforms</span><span>Loom</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-group__label">Creative &amp; Video</h3>
-          <div class="pills">
-            <span>Adobe Creative Suite</span><span>Canva</span><span>On-camera production</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-group__label">Marketing</h3>
-          <div class="pills">
-            <span>Content strategy</span><span>Lifecycle email</span><span>SEO</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3 class="skill-group__label">Technical</h3>
-          <div class="pills">
-            <span>Python</span><span>Lua</span><span>React</span><span>Git</span>
-          </div>
-        </div>
+
+        <ul class="skills-cloud__pills" data-skill-pills data-stagger>
+          <li class="skill-pill" data-skill="product"><span class="skill-pill__dot"></span>ClickUp</li>
+          <li class="skill-pill" data-skill="product"><span class="skill-pill__dot"></span>Notion</li>
+          <li class="skill-pill" data-skill="product"><span class="skill-pill__dot"></span>Linear</li>
+          <li class="skill-pill" data-skill="product"><span class="skill-pill__dot"></span>Sprint planning</li>
+          <li class="skill-pill" data-skill="product"><span class="skill-pill__dot"></span>Roadmapping</li>
+
+          <li class="skill-pill" data-skill="ai"><span class="skill-pill__dot"></span>Make.com</li>
+          <li class="skill-pill" data-skill="ai"><span class="skill-pill__dot"></span>Zapier</li>
+          <li class="skill-pill" data-skill="ai"><span class="skill-pill__dot"></span>ChatGPT</li>
+          <li class="skill-pill" data-skill="ai"><span class="skill-pill__dot"></span>Claude</li>
+          <li class="skill-pill" data-skill="ai"><span class="skill-pill__dot"></span>Gemini</li>
+          <li class="skill-pill" data-skill="ai"><span class="skill-pill__dot"></span>Cursor</li>
+
+          <li class="skill-pill" data-skill="data"><span class="skill-pill__dot"></span>SQL</li>
+          <li class="skill-pill" data-skill="data"><span class="skill-pill__dot"></span>Dashboards</li>
+          <li class="skill-pill" data-skill="data"><span class="skill-pill__dot"></span>A/B testing</li>
+          <li class="skill-pill" data-skill="data"><span class="skill-pill__dot"></span>Product metrics</li>
+
+          <li class="skill-pill" data-skill="content"><span class="skill-pill__dot"></span>Instructional design</li>
+          <li class="skill-pill" data-skill="content"><span class="skill-pill__dot"></span>Course architecture</li>
+          <li class="skill-pill" data-skill="content"><span class="skill-pill__dot"></span>LMS platforms</li>
+          <li class="skill-pill" data-skill="content"><span class="skill-pill__dot"></span>Loom</li>
+
+          <li class="skill-pill" data-skill="creative"><span class="skill-pill__dot"></span>Adobe Creative Suite</li>
+          <li class="skill-pill" data-skill="creative"><span class="skill-pill__dot"></span>Canva</li>
+          <li class="skill-pill" data-skill="creative"><span class="skill-pill__dot"></span>On-camera production</li>
+
+          <li class="skill-pill" data-skill="marketing"><span class="skill-pill__dot"></span>Content strategy</li>
+          <li class="skill-pill" data-skill="marketing"><span class="skill-pill__dot"></span>Lifecycle email</li>
+          <li class="skill-pill" data-skill="marketing"><span class="skill-pill__dot"></span>SEO</li>
+
+          <li class="skill-pill" data-skill="technical"><span class="skill-pill__dot"></span>Python</li>
+          <li class="skill-pill" data-skill="technical"><span class="skill-pill__dot"></span>Lua</li>
+          <li class="skill-pill" data-skill="technical"><span class="skill-pill__dot"></span>React</li>
+          <li class="skill-pill" data-skill="technical"><span class="skill-pill__dot"></span>Git</li>
+        </ul>
       </div>
       <aside class="cert-card" data-reveal aria-label="Certifications">
         <a class="cert-card__inner" href="https://www.cloudskillsboost.google/catalog" target="_blank" rel="noopener noreferrer" data-tilt>

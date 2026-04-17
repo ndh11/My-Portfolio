@@ -279,6 +279,39 @@
     });
   }
 
+  // Skills cloud — filter + live count
+  var skillFilters = document.querySelectorAll("[data-skill-filters] .skill-filter");
+  var skillPills = document.querySelectorAll("[data-skill-pills] .skill-pill");
+  var skillsCountEl = document.querySelector("[data-skills-count]");
+  var totalSkills = skillPills.length;
+  if (skillFilters.length && skillPills.length) {
+    skillFilters.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var filter = btn.getAttribute("data-filter") || "all";
+        skillFilters.forEach(function (b) {
+          b.classList.toggle("is-active", b === btn);
+        });
+        var shown = 0;
+        skillPills.forEach(function (pill, i) {
+          var skill = pill.getAttribute("data-skill") || "";
+          var match = filter === "all" || skill === filter;
+          pill.classList.toggle("is-dimmed", filter !== "all" && !match);
+          pill.classList.toggle("is-highlighted", filter !== "all" && match);
+          if (match) shown += 1;
+        });
+        if (skillsCountEl) {
+          if (filter === "all") {
+            skillsCountEl.textContent = totalSkills + " tools across 7 disciplines.";
+          } else {
+            var label = btn.querySelector(".skill-filter__label");
+            var name = label ? label.textContent.trim() : filter;
+            skillsCountEl.textContent = shown + " in " + name + ".";
+          }
+        }
+      });
+    });
+  }
+
   // Projects filters
   var filterBtns = document.querySelectorAll("[data-filters] .filter");
   var projectCards = document.querySelectorAll("[data-project-grid] .project-card");
