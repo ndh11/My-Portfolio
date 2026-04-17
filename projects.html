@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Projects by Natasha Harris — product, AI workflows, data, content, and creative. Selected work with outcomes, tools, and context." />
+  <meta name="description" content="Projects by Natasha Harris — live and in-progress builds. The first is this portfolio itself, hand-coded in HTML, CSS, and JavaScript." />
   <title>Projects · Natasha Harris</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,148 +34,67 @@
 
   <main id="main">
     <section class="section projects-hero">
-      <div class="projects-hero__grid">
-        <div data-reveal>
-          <p class="eyebrow">Projects</p>
-          <h1 class="section__title projects-hero__title">
-            Selected work across product, AI, data, and creative.
-          </h1>
-          <p class="section__sub projects-hero__sub">
-            A growing set of case studies. Some are live write-ups; others are gated or in progress—reach out if you'd
-            like context on outcomes, tools, or process.
-          </p>
-          <div class="projects-hero__actions">
-            <a class="btn btn--primary" href="index.html#contact" data-magnetic>Request a walkthrough</a>
-            <a class="btn btn--ghost" href="index.html#impact" data-magnetic>See the impact summary</a>
-          </div>
+      <div class="projects-hero__solo" data-reveal>
+        <p class="eyebrow">Projects</p>
+        <h1 class="section__title projects-hero__title">
+          Live builds—starting with this one.
+        </h1>
+        <p class="section__sub projects-hero__sub">
+          This page only shows things I’ve actually shipped. More case studies from product, AI workflows, and
+          creative work are in progress—reach out if you’d like context on outcomes, tools, or process.
+        </p>
+        <div class="projects-hero__actions">
+          <a class="btn btn--primary" href="#portfolio-project" data-magnetic>See the build</a>
+          <a class="btn btn--ghost" href="index.html#contact" data-magnetic>Request a walkthrough</a>
         </div>
-        <aside class="projects-filters" data-reveal aria-label="Filter projects">
-          <p class="skill-group__label">Filter by type</p>
-          <div class="filter-row" role="tablist" data-filters>
-            <button type="button" class="filter is-active" data-filter="all">All</button>
-            <button type="button" class="filter" data-filter="product">Product</button>
-            <button type="button" class="filter" data-filter="ai">AI &amp; automation</button>
-            <button type="button" class="filter" data-filter="data">Data</button>
-            <button type="button" class="filter" data-filter="creative">Creative</button>
-            <button type="button" class="filter" data-filter="ops">Ops &amp; leadership</button>
-          </div>
-        </aside>
       </div>
     </section>
 
     <section class="section section--tight projects">
-      <ol class="project-grid" data-stagger data-project-grid>
-        <li class="project-card" data-reveal data-tilt data-category="ai product">
-          <a class="project-card__inner" href="#" aria-label="AI-first course production pipeline (case study coming soon)">
-            <span class="project-card__status">Case study in progress</span>
-            <div class="project-card__art project-card__art--a" aria-hidden="true"></div>
-            <div class="project-card__body">
-              <div class="project-card__tags">
-                <span>AI</span><span>Automation</span><span>Product</span>
+      <ol class="project-grid project-grid--single" data-stagger data-project-grid>
+        <li id="portfolio-project" class="project-card project-card--wide" data-reveal data-tilt data-category="product creative code">
+          <a class="project-card__inner" href="https://github.com/ndh11/My-Portfolio" target="_blank" rel="noopener" aria-label="Personal portfolio — source on GitHub">
+            <span class="project-card__status">Live · Source on GitHub</span>
+            <div class="project-card__art project-card__art--portfolio" aria-hidden="true">
+              <span class="project-card__art-orb project-card__art-orb--a"></span>
+              <span class="project-card__art-orb project-card__art-orb--b"></span>
+              <div class="project-card__art-window">
+                <span class="project-card__art-dots">
+                  <i></i><i></i><i></i>
+                </span>
+                <span class="project-card__art-url">natasha.dev/portfolio</span>
               </div>
-              <h2 class="project-card__title">AI-first course production pipeline</h2>
-              <p class="project-card__desc">
-                Stitched ChatGPT, Claude, and Gemini into a Make.com + Zapier assembly line—cutting repetitive content
-                formatting and accelerating course builds end-to-end.
-              </p>
-              <p class="project-card__meta">CodaKid · 2024 – Present</p>
+              <div class="project-card__art-code">
+                <span class="tag">&lt;portfolio</span>
+                <span class="attr">style</span>=<span class="value">"handmade"</span>
+                <span class="tag">/&gt;</span>
+              </div>
+              <div class="project-card__art-mono" aria-hidden="true">NH</div>
             </div>
-          </a>
-        </li>
-
-        <li class="project-card" data-reveal data-tilt data-category="product ops">
-          <a class="project-card__inner" href="#" aria-label="40+ K–12 course curriculum system (case study coming soon)">
-            <span class="project-card__status">Private</span>
-            <div class="project-card__art project-card__art--b" aria-hidden="true"></div>
             <div class="project-card__body">
               <div class="project-card__tags">
-                <span>Product</span><span>Curriculum</span><span>Ops</span>
+                <span>Web</span><span>Design</span><span>HTML · CSS · JS</span>
               </div>
-              <h2 class="project-card__title">40+ course curriculum system</h2>
+              <h2 class="project-card__title">Personal portfolio (this site)</h2>
               <p class="project-card__desc">
-                Architected a scalable K–12 coding &amp; AI curriculum—from lesson specs to QA templates—so a remote team
-                could ship at pace without losing consistency or rigor.
+                Designed and built from scratch in HTML, CSS, and JavaScript—no frameworks. Kinetic typography,
+                scroll-driven reveals, 3D card tilts, a spinning brand badge, animated counters, and motion that
+                respects <code>prefers-reduced-motion</code>. Deployed as a static site, shipped from the repo.
               </p>
-              <p class="project-card__meta">CodaKid · 2023 – Present</p>
-            </div>
-          </a>
-        </li>
-
-        <li class="project-card" data-reveal data-tilt data-category="data">
-          <a class="project-card__inner" href="#" aria-label="Learner analytics in BigQuery (case study coming soon)">
-            <span class="project-card__status">Case study in progress</span>
-            <div class="project-card__art project-card__art--c" aria-hidden="true"></div>
-            <div class="project-card__body">
-              <div class="project-card__tags">
-                <span>Data</span><span>BigQuery</span><span>Looker</span>
-              </div>
-              <h2 class="project-card__title">Learner analytics &amp; drop-off diagnostics</h2>
-              <p class="project-card__desc">
-                Designed BigQuery + Looker Studio dashboards that exposed module drop-offs and drove curriculum
-                restructures—lifting completion on the worst offenders.
-              </p>
-              <p class="project-card__meta">CodaKid · 2024</p>
-            </div>
-          </a>
-        </li>
-
-        <li class="project-card" data-reveal data-tilt data-category="creative">
-          <a class="project-card__inner" href="#" aria-label="Paid acquisition &amp; creative system (case study coming soon)">
-            <span class="project-card__status">Private</span>
-            <div class="project-card__art project-card__art--d" aria-hidden="true"></div>
-            <div class="project-card__body">
-              <div class="project-card__tags">
-                <span>Marketing</span><span>Creative</span><span>Lifecycle</span>
-              </div>
-              <h2 class="project-card__title">Paid acquisition &amp; creative system</h2>
-              <p class="project-card__desc">
-                Ran end-to-end Meta &amp; Google Ads with a Go High Level lifecycle engine—producing creative in Adobe
-                Suite and Canva and closing the loop with performance data.
-              </p>
-              <p class="project-card__meta">CodaKid · 2023 – Present</p>
-            </div>
-          </a>
-        </li>
-
-        <li class="project-card" data-reveal data-tilt data-category="ops">
-          <a class="project-card__inner" href="#" aria-label="Remote delivery operating system (case study coming soon)">
-            <span class="project-card__status">Private</span>
-            <div class="project-card__art project-card__art--e" aria-hidden="true"></div>
-            <div class="project-card__body">
-              <div class="project-card__tags">
-                <span>Ops</span><span>Leadership</span><span>Rituals</span>
-              </div>
-              <h2 class="project-card__title">Remote delivery operating system</h2>
-              <p class="project-card__desc">
-                ClickUp + Notion sprint cadence, status rituals, and cross-team hand-offs that keep a remote team
-                hitting deliveries without heroics.
-              </p>
-              <p class="project-card__meta">CodaKid · 2023 – Present</p>
-            </div>
-          </a>
-        </li>
-
-        <li class="project-card" data-reveal data-tilt data-category="product ops">
-          <a class="project-card__inner" href="#" aria-label="CTE certification program (case study coming soon)">
-            <span class="project-card__status">Archived</span>
-            <div class="project-card__art project-card__art--f" aria-hidden="true"></div>
-            <div class="project-card__body">
-              <div class="project-card__tags">
-                <span>Program</span><span>Compliance</span><span>Education</span>
-              </div>
-              <h2 class="project-card__title">CTE certification program (400+ students)</h2>
-              <p class="project-card__desc">
-                Managed certification pathways end-to-end with a 100% compliance record—built the artifacts, rituals,
-                and reporting to keep the program audit-ready.
-              </p>
-              <p class="project-card__meta">Tempe Union HSD · 2022 – 2023</p>
+              <ul class="project-card__list">
+                <li>Hand-authored HTML, CSS, and vanilla JS (no framework)</li>
+                <li>Responsive across desktop and mobile with accessible motion</li>
+                <li>Versioned on GitHub, deployable to any static host</li>
+              </ul>
+              <p class="project-card__meta">2026 · github.com/ndh11/My-Portfolio ↗</p>
             </div>
           </a>
         </li>
       </ol>
 
-      <p class="projects__empty" data-empty hidden>
-        No projects match that filter yet — more case studies on the way.
+      <p class="projects__soon" data-reveal>
+        More case studies—product, AI workflows, and creative—are in progress.
+        <a href="index.html#contact">Reach out</a> if you’d like an early look.
       </p>
     </section>
 
@@ -184,7 +103,7 @@
         <p class="eyebrow">Want the long version?</p>
         <h2 class="section__title">Happy to walk through outcomes, metrics, and artifacts.</h2>
         <p class="section__sub contact__lede">
-          Most case studies are private. If you're hiring, collaborating, or just curious, I'll share what I can.
+          Most case studies are private. If you’re hiring, collaborating, or just curious, I’ll share what I can.
         </p>
         <div class="contact__actions">
           <a class="btn btn--primary" href="mailto:natharris2000@yahoo.com" data-magnetic>Email me</a>

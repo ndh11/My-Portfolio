@@ -1623,6 +1623,185 @@ a {
   background: linear-gradient(135deg, #20311d 0%, #3f6035 45%, #e8a07a 100%);
 }
 
+/* Portfolio project — editor/browser inspired art */
+.project-card__art--portfolio {
+  background:
+    radial-gradient(1200px 400px at 110% -20%, rgba(120, 110, 210, 0.22), transparent 55%),
+    radial-gradient(900px 300px at -10% 120%, rgba(212, 93, 56, 0.28), transparent 55%),
+    linear-gradient(135deg, #1a1815 0%, #2a2522 55%, #3a2e26 100%);
+  overflow: hidden;
+  isolation: isolate;
+  aspect-ratio: 16 / 9;
+}
+
+.project-card__art-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(36px);
+  opacity: 0.65;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.project-card__art-orb--a {
+  width: 52%;
+  aspect-ratio: 1;
+  top: -12%;
+  left: -10%;
+  background: radial-gradient(circle at 40% 40%, rgba(212, 93, 56, 0.85), rgba(212, 93, 56, 0) 65%);
+  animation: blobFloat 13s ease-in-out infinite;
+}
+
+.project-card__art-orb--b {
+  width: 42%;
+  aspect-ratio: 1;
+  bottom: -12%;
+  right: -8%;
+  background: radial-gradient(circle at 60% 60%, rgba(120, 110, 210, 0.85), rgba(120, 110, 210, 0) 65%);
+  animation: blobFloat 15s ease-in-out infinite reverse;
+}
+
+.project-card__art-window {
+  position: absolute;
+  top: 10%;
+  left: 6%;
+  right: 6%;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.85rem;
+  background: rgba(253, 250, 245, 0.95);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  z-index: 1;
+}
+
+.project-card__art-dots {
+  display: inline-flex;
+  gap: 0.3rem;
+}
+
+.project-card__art-dots i {
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--line);
+}
+
+.project-card__art-dots i:nth-child(1) { background: #e06464; }
+.project-card__art-dots i:nth-child(2) { background: #e0b664; }
+.project-card__art-dots i:nth-child(3) { background: #64c178; }
+
+.project-card__art-url {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink-muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.project-card__art-code {
+  position: absolute;
+  left: 8%;
+  bottom: 14%;
+  padding: 0.55rem 0.85rem;
+  background: rgba(20, 18, 15, 0.72);
+  color: #f5ede3;
+  border: 1px solid rgba(253, 250, 245, 0.14);
+  border-radius: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  z-index: 2;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.project-card__art-code .tag   { color: #f3a26e; }
+.project-card__art-code .attr  { color: #a6d1ff; }
+.project-card__art-code .value { color: #ffd79a; }
+
+.project-card__art-mono {
+  position: absolute;
+  right: -3%;
+  bottom: -10%;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(7rem, 22vw, 14rem);
+  line-height: 0.8;
+  color: rgba(253, 250, 245, 0.08);
+  letter-spacing: -0.04em;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Single-project layout */
+.project-grid--single {
+  grid-template-columns: 1fr;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.project-card--wide .project-card__art {
+  aspect-ratio: 16 / 9;
+}
+
+.project-card__list {
+  margin: 0 0 0.9rem;
+  padding: 0 0 0 1.05rem;
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+
+.project-card__list li + li {
+  margin-top: 0.2rem;
+}
+
+.project-card__desc code {
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Solo hero layout when there are no filters */
+.projects-hero__solo {
+  max-width: 780px;
+}
+
+.projects__soon {
+  margin-top: 2rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-md);
+  color: var(--ink-muted);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.projects__soon a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.projects__soon a:hover {
+  border-color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card__art-orb {
+    animation: none;
+  }
+}
+
 .project-card__body {
   padding: 1.35rem 1.4rem 1.5rem;
 }
