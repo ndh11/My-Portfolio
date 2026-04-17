@@ -279,6 +279,59 @@
     });
   }
 
+  // Quote carousel — auto-rotate + clickable dots + pause on hover
+  var quoteCarousel = document.querySelector("[data-quote-carousel]");
+  if (quoteCarousel) {
+    var quoteCards = quoteCarousel.querySelectorAll("[data-quote-card]");
+    var quoteDots = quoteCarousel.querySelectorAll("[data-quote-dot]");
+    var quoteIdx = 0;
+    var quoteTimer = null;
+    var quoteInterval = 5200;
+
+    function showQuote(next) {
+      if (next === quoteIdx) return;
+      var prev = quoteIdx;
+      quoteIdx = next;
+      quoteCards.forEach(function (card, i) {
+        card.classList.toggle("is-active", i === next);
+        card.classList.toggle("is-leaving", i === prev);
+      });
+      quoteDots.forEach(function (dot, i) {
+        dot.classList.toggle("is-active", i === next);
+      });
+      setTimeout(function () {
+        quoteCards.forEach(function (card) {
+          card.classList.remove("is-leaving");
+        });
+      }, 600);
+    }
+
+    function queueNextQuote() {
+      clearTimeout(quoteTimer);
+      quoteTimer = setTimeout(function () {
+        var next = (quoteIdx + 1) % quoteCards.length;
+        showQuote(next);
+        queueNextQuote();
+      }, quoteInterval);
+    }
+
+    if (quoteCards.length > 1 && !prefersReduced) {
+      queueNextQuote();
+      quoteCarousel.addEventListener("mouseenter", function () {
+        clearTimeout(quoteTimer);
+      });
+      quoteCarousel.addEventListener("mouseleave", queueNextQuote);
+    }
+
+    quoteDots.forEach(function (dot) {
+      dot.addEventListener("click", function () {
+        var target = parseInt(dot.getAttribute("data-quote-dot") || "0", 10);
+        showQuote(target);
+        if (!prefersReduced) queueNextQuote();
+      });
+    });
+  }
+
   // Skills cloud — filter + live count
   var skillFilters = document.querySelectorAll("[data-skill-filters] .skill-filter");
   var skillPills = document.querySelectorAll("[data-skill-pills] .skill-pill");

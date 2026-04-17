@@ -1007,7 +1007,7 @@ a {
 .quote-band__inner {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 2.5rem 2rem;
+  padding: clamp(2.5rem, 5vw, 3.25rem) clamp(1.5rem, 4vw, 2.5rem) clamp(1.75rem, 4vw, 2.25rem);
   border-radius: var(--radius-lg);
   background: var(--ink);
   color: var(--bg);
@@ -1020,6 +1020,53 @@ a {
   position: absolute;
   inset: -40%;
   background: radial-gradient(circle at 80% 20%, rgba(196, 92, 62, 0.35), transparent 45%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.quote-deck {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: clamp(9rem, 18vw, 11rem);
+  z-index: 1;
+}
+
+.quote-card {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: center;
+  padding-left: clamp(2.25rem, 5vw, 3.25rem);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.quote-card.is-active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.quote-card.is-leaving {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.quote-card__mark {
+  position: absolute;
+  left: -0.15rem;
+  top: -0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 10vw, 6rem);
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.6;
+  user-select: none;
   pointer-events: none;
 }
 
@@ -1034,11 +1081,56 @@ a {
 }
 
 .quote__attr {
-  margin: 1rem 0 0;
+  margin: 0.9rem 0 0;
   font-size: 0.875rem;
-  opacity: 0.75;
+  letter-spacing: 0.02em;
+  opacity: 0.72;
   position: relative;
   z-index: 1;
+}
+
+.quote-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+  position: relative;
+  z-index: 1;
+}
+
+.quote-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(253, 250, 245, 0.25);
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease, width 0.35s ease;
+  position: relative;
+}
+
+.quote-dot:hover {
+  background: rgba(253, 250, 245, 0.55);
+  transform: scale(1.15);
+}
+
+.quote-dot.is-active {
+  width: 26px;
+  border-radius: 999px;
+  background: var(--bg);
+}
+
+.quote-dot:focus-visible {
+  outline: 2px solid var(--bg);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quote-card,
+  .quote-dot {
+    transition: none;
+  }
 }
 
 /* Skills */
