@@ -342,35 +342,39 @@ a {
   gap: 0.35em;
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 0.8em;
+  font-size: 0.75em;
   color: var(--ink-muted);
-  margin-top: 0.25em;
-}
-
-.hero__subline-tail {
-  color: var(--ink);
-  font-style: italic;
+  margin-top: 0.35em;
+  line-height: 1.2;
 }
 
 /* Rotating word */
 .rotator {
   position: relative;
-  display: inline-grid;
-  align-items: baseline;
+  display: inline-block;
   vertical-align: baseline;
   color: var(--accent);
-  min-width: 11ch;
-  height: 1.05em;
   overflow: hidden;
+  line-height: 1.1;
+  height: 1.1em;
+}
+
+.rotator__sizer {
+  display: inline-block;
+  visibility: hidden;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 .rotator__word {
-  grid-area: 1 / 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
   transform: translateY(110%);
   opacity: 0;
   transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
   will-change: transform, opacity;
-  white-space: nowrap;
 }
 
 .rotator__word.is-active {
@@ -386,14 +390,17 @@ a {
 @media (prefers-reduced-motion: reduce) {
   .rotator {
     height: auto;
+    overflow: visible;
   }
   .rotator__word {
-    display: none;
+    position: static;
     transform: none;
-    opacity: 1;
+    opacity: 0;
+    display: none;
   }
   .rotator__word.is-active {
     display: inline;
+    opacity: 1;
   }
 }
 
