@@ -336,7 +336,7 @@ a {
 }
 
 .hero__subline {
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   gap: 0.35em;
@@ -346,6 +346,19 @@ a {
   color: var(--ink-muted);
   margin-top: 0.35em;
   line-height: 1.2;
+  max-width: 100%;
+}
+
+@media (max-width: 540px) {
+  .hero__subline {
+    font-size: 0.65em;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero__subline {
+    font-size: 0.58em;
+  }
 }
 
 /* Rotating word */
@@ -357,6 +370,7 @@ a {
   overflow: hidden;
   line-height: 1.1;
   height: 1.1em;
+  max-width: 100%;
 }
 
 .rotator__sizer {
