@@ -3,8 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Natasha Harris — Product developer and manager. End-to-end delivery across strategy, AI workflows, data, content, and creative. 40+ launches, remote teams, evidence-led roadmaps." />
-  <title>Natasha Harris · Product Developer &amp; Manager</title>
+  <meta name="description" content="Natasha Harris — Product development, EdTech, AI &amp; automation. 3+ years building products at scale: 40+ courses shipped, curriculum, video production, and remote team delivery." />
+  <title>Natasha Harris · Product Development &amp; EdTech</title>
+
+  <!-- Open Graph / social cards -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Natasha Harris · Product Development &amp; EdTech" />
+  <meta property="og:description" content="3+ years building EdTech products at scale. 40+ courses shipped — curriculum, AI workflows, video production, and remote team delivery." />
+  <meta property="og:url" content="https://natashsaharrisportfolio.netlify.app/" />
+  <meta property="og:image" content="https://natashsaharrisportfolio.netlify.app/assets/my-photo.jpeg" />
+  <meta property="og:site_name" content="Natasha Harris" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Natasha Harris · Product Development &amp; EdTech" />
+  <meta name="twitter:description" content="3+ years building EdTech products at scale. 40+ courses shipped — curriculum, AI workflows, video production, and remote team delivery." />
+  <meta name="twitter:image" content="https://natashsaharrisportfolio.netlify.app/assets/my-photo.jpeg" />
+
+  <!-- Structured data for search engines & AI recruiters -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Natasha Harris",
+    "jobTitle": "Head of Product Development",
+    "worksFor": { "@type": "Organization", "name": "CodaKid" },
+    "url": "https://natashsaharrisportfolio.netlify.app/",
+    "image": "https://natashsaharrisportfolio.netlify.app/assets/my-photo.jpeg",
+    "email": "mailto:natharris2000@yahoo.com",
+    "telephone": "+1-480-707-8857",
+    "sameAs": [
+      "https://www.linkedin.com/in/natasha-harris-",
+      "https://github.com/ndh11"
+    ],
+    "knowsAbout": [
+      "Product Development", "EdTech", "AI Workflows", "Automation",
+      "Curriculum Design", "Data Analytics", "BigQuery", "Python",
+      "Video Production", "Remote Team Management"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Maine, Presque Isle"
+    }
+  }
+  </script>
+
+  <!-- Theme boot: set before paint to avoid flash -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t !== "dark" && t !== "light") {
+          t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="alternate icon" href="assets/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
@@ -22,10 +75,6 @@
   <header class="site-header" data-header>
     <div class="header-inner">
       <a class="logo" href="#">Natasha Harris</a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
-        <span class="nav-toggle__bars" aria-hidden="true"></span>
-        <span class="visually-hidden">Menu</span>
-      </button>
       <nav class="site-nav" id="site-nav" data-nav>
         <a href="#home">Home</a>
         <a href="#impact">Work</a>
@@ -33,6 +82,24 @@
         <a href="#about">About</a>
         <a href="#contact" class="nav-cta">Say hello</a>
       </nav>
+      <div class="header-tools">
+        <button class="cmdk-hint" type="button" data-palette-open aria-label="Open command menu">
+          <span aria-hidden="true">⌘K</span>
+        </button>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" title="Toggle theme">
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.5" />
+            <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5 5l1.6 1.6M17.4 17.4 19 19M19 5l-1.6 1.6M6.6 17.4 5 19" />
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z" />
+          </svg>
+        </button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="nav-toggle__bars" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -40,9 +107,9 @@
     <section id="home" class="hero section">
       <div class="hero__grid">
         <div class="hero__copy" data-reveal>
-          <p class="hero__tagline">Product Development · AI &amp; Automation · Content &amp; Operations</p>
+          <p class="hero__tagline">Product Development · EdTech · AI &amp; Automation · Content &amp; Operations</p>
           <h1 class="hero__title">
-            Hi, I’m <span class="hero__name" data-split>Natasha.</span><br />
+            Hi, I’m <span class="hero__name" data-scramble="Natasha.">Natasha.</span><br />
             <span class="hero__subline">
               I build
               <span class="rotator" data-rotator aria-live="polite">
@@ -56,8 +123,9 @@
             </span>
           </h1>
           <p class="hero__lede">
-            Strategy, AI, content, and creative—stitched into one delivery. 3+ years leading remote teams,
-            40+ launches shipped, and a soft spot for the metrics that actually move.
+            3+ years building EdTech products at scale. Shipped 40+ courses from concept to launch—curriculum,
+            AI-powered workflows, video production, and creative operations—combining hands-on skills (Python, AI/ML
+            tools) with strategy in fully remote teams.
           </p>
           <div class="hero__actions">
             <a class="btn btn--primary" href="#impact" data-magnetic>Explore recent work</a>
@@ -77,7 +145,7 @@
               <span class="hero__status-dot"></span>
               <span class="hero__status-label">Available · Remote</span>
             </span>
-            <div class="hero__badge" aria-hidden="true">
+            <button class="hero__badge" type="button" data-confetti aria-label="A little celebration" title="Click me">
               <svg class="hero__badge-ring" viewBox="0 0 120 120">
                 <defs>
                   <path id="heroBadgePath" d="M 60,60 m -44,0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0" />
@@ -87,7 +155,7 @@
                 </text>
               </svg>
               <span class="hero__badge-core">★</span>
-            </div>
+            </button>
           </div>
           <figcaption class="hero__caption">Builder · Learner · Operator</figcaption>
         </figure>
@@ -114,9 +182,9 @@
           <span class="stats__number" data-count-target>0</span>
           <span class="stats__label">Learners supported</span>
         </li>
-        <li class="stats__item" data-count="6" data-suffix="">
+        <li class="stats__item" data-count="7" data-suffix="">
           <span class="stats__number" data-count-target>0</span>
-          <span class="stats__label">Disciplines bridged</span>
+          <span class="stats__label">Skill areas</span>
         </li>
       </ul>
     </section>
@@ -124,9 +192,9 @@
     <section id="impact" class="section section--tight">
       <div class="section__head" data-reveal>
         <p class="eyebrow">Highlights</p>
-        <h2 class="section__title">Three habits show up in every launch.</h2>
+        <h2 class="section__title">What shows up in every launch.</h2>
         <p class="section__sub">
-          Ship the whole thing. Let AI do the boring parts. Decide with data, not vibes.
+          End-to-end course delivery, AI to speed production, and learner data to improve completion—plus the ops to ship on time.
         </p>
       </div>
       <div class="cards cards--3" data-stagger>
@@ -134,37 +202,103 @@
           <span class="card__tag">CodaKid · Product</span>
           <h3 class="card__title">Curriculum &amp; AI at scale</h3>
           <p class="card__body">
-            Shipped 40+ K–12 coding and AI courses end-to-end, owning the full lifecycle from curriculum design through
-            QA, platform delivery, and post-launch iteration—plus AI-powered production workflows with ChatGPT, Claude, and Gemini.
+            40+ K–12 coding and AI courses end-to-end: curriculum through QA, platform delivery, and post-launch iteration.
+            AI-powered production with ChatGPT, Claude, and Gemini; Make.com and Zapier across content publishing, QA, and team coordination.
           </p>
           <ul class="card__list">
-            <li>Make.com &amp; Zapier across publishing, QA tracking, and team coordination</li>
-            <li>Python, SQL, and AI/ML tools alongside hands-on curriculum and QA</li>
+            <li>Improved course production speed; cut repetitive content formatting</li>
+            <li>Streamlined operations so the team could focus on higher-value work</li>
           </ul>
+          <details class="case-study" data-case-study>
+            <summary class="case-study__toggle">
+              <span>How it shipped</span>
+              <svg class="case-study__chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 6 4 4 4-4" /></svg>
+            </summary>
+            <div class="case-study__panel">
+              <dl class="case-study__steps">
+                <div class="case-study__step">
+                  <dt>Problem</dt>
+                  <dd>Course production was slow and manual—every lesson hand-formatted, every QA pass tracked in scattered docs.</dd>
+                </div>
+                <div class="case-study__step">
+                  <dt>Action</dt>
+                  <dd>Built AI-assisted drafting pipelines (ChatGPT, Claude, Gemini) plus Make.com / Zapier automations for publishing, QA tracking, and team handoffs.</dd>
+                </div>
+                <div class="case-study__step">
+                  <dt>Result</dt>
+                  <dd>40+ courses shipped end-to-end with faster production cycles and near-zero repetitive formatting work.</dd>
+                </div>
+              </dl>
+            </div>
+          </details>
         </article>
         <article class="card card--lift" data-reveal data-tilt>
           <span class="card__tag">Evidence-led</span>
-          <h3 class="card__title">Data that drives decisions</h3>
+          <h3 class="card__title">Learner data, better modules</h3>
           <p class="card__body">
-            Closed the loop between product and outcomes: dashboards surfaced drop-offs, modules got restructured, and
-            completion rates moved. Roadmap decisions backed by the numbers that matter.
+            Used learner performance data to spot drop-off patterns, restructure underperforming modules, and lift course
+            completion rates.
           </p>
           <ul class="card__list">
-            <li>Dashboards, A/B testing, and product metrics</li>
-            <li>Creative and content for lifecycle programs</li>
+            <li>Google Sheets, BigQuery (SQL), Looker Studio, dashboards</li>
+            <li>A/B testing and product metrics</li>
           </ul>
+          <details class="case-study" data-case-study>
+            <summary class="case-study__toggle">
+              <span>How it shipped</span>
+              <svg class="case-study__chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 6 4 4 4-4" /></svg>
+            </summary>
+            <div class="case-study__panel">
+              <dl class="case-study__steps">
+                <div class="case-study__step">
+                  <dt>Problem</dt>
+                  <dd>Learners were quietly dropping off mid-course and nobody knew exactly where—or why.</dd>
+                </div>
+                <div class="case-study__step">
+                  <dt>Action</dt>
+                  <dd>Instrumented completion funnels in BigQuery and Looker Studio, found the exact modules where attention died, and restructured them.</dd>
+                </div>
+                <div class="case-study__step">
+                  <dt>Result</dt>
+                  <dd>Lifted course completion rates—and turned dashboards into a standing habit, not a one-off audit.</dd>
+                </div>
+              </dl>
+            </div>
+          </details>
         </article>
         <article class="card card--lift" data-reveal data-tilt>
           <span class="card__tag">Leadership</span>
           <h3 class="card__title">Remote teams that ship</h3>
           <p class="card__body">
-            Managed a remote team across video production and course development; ran sprint cycles in ClickUp and
-            Notion, consistently hitting delivery deadlines.
+            Managed a remote team across video production and course development; sprint cycles in ClickUp and Notion,
+            consistently hitting delivery deadlines.
           </p>
           <ul class="card__list">
-            <li>Stakeholder management, OKRs, and roadmapping</li>
-            <li>Creative assets in Adobe Creative Suite and Canva</li>
+            <li>Sprint planning, OKRs, and roadmapping</li>
+            <li>Ad creatives: Meta Ads, Google Ads, and social—plus the Adobe &amp; Canva production stack</li>
           </ul>
+          <details class="case-study" data-case-study>
+            <summary class="case-study__toggle">
+              <span>How it shipped</span>
+              <svg class="case-study__chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 6 4 4 4-4" /></svg>
+            </summary>
+            <div class="case-study__panel">
+              <dl class="case-study__steps">
+                <div class="case-study__step">
+                  <dt>Problem</dt>
+                  <dd>A fully remote team across video and course dev, with deadlines that didn't care about time zones.</dd>
+                </div>
+                <div class="case-study__step">
+                  <dt>Action</dt>
+                  <dd>Ran sprint cycles in ClickUp and Notion with clear owners, OKRs, and a system that carried the work between handoffs.</dd>
+                </div>
+                <div class="case-study__step">
+                  <dt>Result</dt>
+                  <dd>Consistently hit delivery deadlines—while also shipping ad creative across Meta, Google, and social.</dd>
+                </div>
+              </dl>
+            </div>
+          </details>
         </article>
       </div>
     </section>
@@ -219,11 +353,63 @@
       </div>
     </section>
 
+    <section id="pipeline" class="section pipeline-section">
+      <div class="section__head" data-reveal>
+        <p class="eyebrow">Show, don&rsquo;t tell</p>
+        <h2 class="section__title">How a course actually ships.</h2>
+        <p class="section__sub">
+          This is the real production pipeline behind 40+ launches—AI where it&rsquo;s fast, humans where it matters.
+          Click a stage, or run the whole thing.
+        </p>
+      </div>
+      <div class="pipeline" data-pipeline data-reveal>
+        <div class="pipeline__track" role="tablist" aria-label="Production pipeline stages">
+          <div class="pipeline__rail" aria-hidden="true">
+            <span class="pipeline__rail-fill" data-pipeline-fill></span>
+            <span class="pipeline__packet" data-pipeline-packet></span>
+          </div>
+          <button class="pipeline__node is-active" type="button" role="tab" aria-selected="true" data-pipeline-node="0">
+            <span class="pipeline__dot"><span class="pipeline__num">01</span></span>
+            <span class="pipeline__label">Concept</span>
+          </button>
+          <button class="pipeline__node" type="button" role="tab" aria-selected="false" data-pipeline-node="1">
+            <span class="pipeline__dot"><span class="pipeline__num">02</span></span>
+            <span class="pipeline__label">AI draft</span>
+          </button>
+          <button class="pipeline__node" type="button" role="tab" aria-selected="false" data-pipeline-node="2">
+            <span class="pipeline__dot"><span class="pipeline__num">03</span></span>
+            <span class="pipeline__label">Build &amp; QA</span>
+          </button>
+          <button class="pipeline__node" type="button" role="tab" aria-selected="false" data-pipeline-node="3">
+            <span class="pipeline__dot"><span class="pipeline__num">04</span></span>
+            <span class="pipeline__label">Launch</span>
+          </button>
+          <button class="pipeline__node" type="button" role="tab" aria-selected="false" data-pipeline-node="4">
+            <span class="pipeline__dot"><span class="pipeline__num">05</span></span>
+            <span class="pipeline__label">Measure</span>
+          </button>
+        </div>
+        <div class="pipeline__detail" data-pipeline-detail aria-live="polite">
+          <h3 class="pipeline__detail-title" data-pipeline-title>Concept</h3>
+          <p class="pipeline__detail-desc" data-pipeline-desc>
+            Scope the course with learning outcomes first: who it&rsquo;s for, what they&rsquo;ll build, and where it fits the catalog.
+          </p>
+          <div class="pipeline__tools" data-pipeline-tools></div>
+        </div>
+        <div class="pipeline__actions">
+          <button class="btn btn--primary pipeline__run" type="button" data-pipeline-run data-magnetic>
+            Run the pipeline <span aria-hidden="true">▸</span>
+          </button>
+          <p class="pipeline__hint" data-pipeline-status>5 stages · concept to live course</p>
+        </div>
+      </div>
+    </section>
+
     <section id="skills" class="section">
       <div class="section__head" data-reveal>
         <p class="eyebrow">Skills &amp; tools</p>
         <h2 class="section__title">The stack behind the work—ops, AI, data, and craft.</h2>
-        <p class="section__sub">Seven disciplines, twenty-nine tools, one delivery system.</p>
+        <p class="section__sub">Seven areas—mirroring what’s on the resume.</p>
       </div>
 
       <ol class="skill-index" data-reveal>
@@ -235,8 +421,8 @@
           <ul class="skill-entry__list">
             <li>ClickUp</li>
             <li>Notion</li>
-            <li>Linear</li>
             <li>Sprint planning</li>
+            <li>OKRs</li>
             <li>Roadmapping</li>
           </ul>
         </li>
@@ -248,45 +434,56 @@
           <ul class="skill-entry__list">
             <li>Make.com</li>
             <li>Zapier</li>
+            <li>n8n</li>
             <li>ChatGPT</li>
             <li>Claude</li>
             <li>Gemini</li>
             <li>Cursor</li>
+            <li>Prompt engineering</li>
+            <li>Workflow design</li>
+            <li>Agentic AI</li>
           </ul>
         </li>
         <li class="skill-entry">
           <div class="skill-entry__row">
             <span class="skill-entry__num" aria-hidden="true">03</span>
-            <h3 class="skill-entry__title">Data</h3>
+            <h3 class="skill-entry__title">Data &amp; Analytics</h3>
           </div>
           <ul class="skill-entry__list">
-            <li>SQL</li>
-            <li>Dashboards</li>
+            <li>Google Sheets</li>
+            <li>BigQuery (SQL)</li>
+            <li>Looker Studio</li>
             <li>A/B testing</li>
+            <li>Dashboards</li>
             <li>Product metrics</li>
           </ul>
         </li>
         <li class="skill-entry">
           <div class="skill-entry__row">
             <span class="skill-entry__num" aria-hidden="true">04</span>
-            <h3 class="skill-entry__title">Content &amp; L&amp;D</h3>
+            <h3 class="skill-entry__title">Curriculum &amp; L&amp;D</h3>
           </div>
           <ul class="skill-entry__list">
             <li>Instructional design</li>
             <li>Course architecture</li>
-            <li>LMS platforms</li>
+            <li>Zoom</li>
+            <li>Google Classroom</li>
             <li>Loom</li>
           </ul>
         </li>
         <li class="skill-entry">
           <div class="skill-entry__row">
             <span class="skill-entry__num" aria-hidden="true">05</span>
-            <h3 class="skill-entry__title">Creative</h3>
+            <h3 class="skill-entry__title">Creative &amp; Video</h3>
           </div>
           <ul class="skill-entry__list">
-            <li>Adobe Creative Suite</li>
+            <li>Adobe Premiere Pro</li>
+            <li>Photoshop</li>
+            <li>Illustrator</li>
+            <li>InDesign</li>
             <li>Canva</li>
             <li>On-camera production</li>
+            <li>Storyboarding</li>
           </ul>
         </li>
         <li class="skill-entry">
@@ -295,8 +492,11 @@
             <h3 class="skill-entry__title">Marketing</h3>
           </div>
           <ul class="skill-entry__list">
+            <li>Go High Level</li>
+            <li>Meta Ads</li>
+            <li>Google Ads</li>
             <li>Content strategy</li>
-            <li>Lifecycle email</li>
+            <li>Social media</li>
             <li>SEO</li>
           </ul>
         </li>
@@ -309,7 +509,9 @@
             <li>Python</li>
             <li>Lua</li>
             <li>React</li>
-            <li>Git</li>
+            <li>GitHub</li>
+            <li>VS Code</li>
+            <li>Cursor</li>
           </ul>
         </li>
       </ol>
@@ -319,12 +521,11 @@
             <img src="assets/derive-insights-from-bigquery-data-skill-badge.png" alt="Google Cloud Skill Badge — Derive Insights from BigQuery Data" width="140" height="140" loading="lazy" />
           </div>
           <div class="cert-card__body">
-            <span class="cert-card__eyebrow">Certification</span>
+            <span class="cert-card__eyebrow">Google Cloud</span>
             <h3 class="cert-card__title">Derive Insights from BigQuery Data</h3>
-            <p class="cert-card__meta">Google Cloud · Skills Boost · 2026</p>
+            <p class="cert-card__meta">Google Cloud Skills Boost · 2026</p>
             <p class="cert-card__desc">
-              Hands-on skill badge covering SQL analytics on BigQuery, data exploration, and building actionable
-              insights at scale.
+              Skill badge: SQL analytics on BigQuery, exploration, and turning data into clear product insight.
             </p>
             <span class="cert-card__cta">View on Skills Boost <span aria-hidden="true">→</span></span>
           </div>
@@ -335,7 +536,7 @@
     <section id="experience" class="section section--alt">
       <div class="section__head" data-reveal>
         <p class="eyebrow">Experience</p>
-        <h2 class="section__title">Six years, three seats, one through-line.</h2>
+        <h2 class="section__title">Three roles, one thread: ship and support learners.</h2>
       </div>
       <ol class="timeline" data-reveal data-timeline>
         <li class="timeline__item">
@@ -350,9 +551,9 @@
               <li>Shipped 40+ K–12 coding and AI courses end-to-end, owning the full lifecycle from curriculum design through QA, platform delivery, and post-launch iteration.</li>
               <li>Built AI-powered production workflows using ChatGPT, Claude, and Gemini that improved course production speed and eliminated repetitive content formatting tasks.</li>
               <li>Implemented Make.com and Zapier automations across content publishing, QA tracking, and team coordination, streamlining operations and freeing up significant time for higher-value work.</li>
-              <li>Used product analytics to identify drop-off patterns and restructure underperforming modules—lifting course completion rates.</li>
+              <li>Used learner performance data to identify drop-off patterns and restructure underperforming modules, improving course completion rates.</li>
               <li>Managed a remote team across video production and course development; ran sprint cycles in ClickUp and Notion, consistently hitting delivery deadlines.</li>
-              <li>Designed creative and content for paid and lifecycle programs—producing assets in Adobe Creative Suite and Canva and keeping messaging consistent across channels.</li>
+              <li>Created ad creatives and marketing content across Meta Ads, Google Ads, and social media.</li>
             </ul>
           </div>
         </li>
@@ -392,10 +593,11 @@
       <div class="about__grid">
         <div data-reveal>
           <p class="eyebrow">About</p>
-          <h2 class="section__title">Range is the point.</h2>
+          <h2 class="section__title">EdTech, end to end.</h2>
           <p class="prose">
-            40+ launches across product, content, and creative. Technical depth (Python, SQL, AI/ML) meets product
-            strategy and hands-on production—remote, usually at pace, always with the details intact.
+            Product development with 3+ years building EdTech at scale. Shipped 40+ courses from concept to launch—curriculum
+            design, AI-powered workflows, video production, and creative operations. Hands-on technical work (Python, AI/ML
+            tools) with product strategy and team management in fully remote settings.
           </p>
           <div class="about__meta">
             <div>
@@ -428,6 +630,10 @@
         </p>
         <div class="contact__actions">
           <a class="btn btn--primary" href="mailto:natharris2000@yahoo.com" data-magnetic>Email me</a>
+          <button class="btn btn--ghost btn--copy" type="button" data-copy-email="natharris2000@yahoo.com" data-magnetic>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 5.5v-2a1.5 1.5 0 0 0-1.5-1.5H4A1.5 1.5 0 0 0 2.5 3.5v5A1.5 1.5 0 0 0 4 10h1.5"/></svg>
+            Copy email
+          </button>
           <a class="btn btn--ghost" href="tel:+14807078857" data-magnetic>Call 480-707-8857</a>
         </div>
         <ul class="contact__links" data-reveal>
@@ -440,11 +646,77 @@
   </main>
 
   <footer class="site-footer">
+    <div class="footer__grid">
+      <div class="footer__col footer__col--brand">
+        <p class="footer__logo">Natasha Harris</p>
+        <p class="footer__status">
+          <span class="footer__status-dot" aria-hidden="true"></span>
+          Available for work · Remote
+        </p>
+        <p class="footer__time">
+          <span data-local-time>--:--</span> <span class="footer__time-zone">Arizona, USA</span>
+        </p>
+      </div>
+      <nav class="footer__col" aria-label="Footer navigation">
+        <p class="footer__heading">Explore</p>
+        <a href="#home">Home</a>
+        <a href="#impact">Work</a>
+        <a href="#pipeline">Pipeline</a>
+        <a href="projects.html">Projects</a>
+        <a href="#about">About</a>
+      </nav>
+      <div class="footer__col">
+        <p class="footer__heading">Connect</p>
+        <a href="https://www.linkedin.com/in/natasha-harris-" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="https://github.com/ndh11" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <button class="footer__copy" type="button" data-copy-email="natharris2000@yahoo.com">natharris2000@yahoo.com</button>
+      </div>
+      <div class="footer__col">
+        <p class="footer__heading">Shortcuts</p>
+        <button class="footer__kbd-row" type="button" data-palette-open>
+          <kbd>⌘</kbd><kbd>K</kbd> <span>Command menu</span>
+        </button>
+        <button class="footer__kbd-row" type="button" data-theme-toggle-alt>
+          <kbd>T</kbd> <span>Toggle theme</span>
+        </button>
+      </div>
+    </div>
     <div class="footer__inner">
-      <a href="mailto:natharris2000@yahoo.com">natharris2000@yahoo.com</a>
-      <a href="#home" class="footer__top">Back to top</a>
+      <span>© <span data-year>2026</span> Natasha Harris · Hand-coded, no framework</span>
+      <a href="#home" class="footer__top">Back to top ↑</a>
     </div>
   </footer>
+
+  <!-- Command palette -->
+  <div class="palette" data-palette hidden>
+    <div class="palette__backdrop" data-palette-close></div>
+    <div class="palette__panel" role="dialog" aria-modal="true" aria-label="Command menu">
+      <div class="palette__search">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m13.5 13.5-3-3"/></svg>
+        <input type="text" data-palette-input placeholder="Search sections, actions, links…" autocomplete="off" spellcheck="false" />
+        <kbd>esc</kbd>
+      </div>
+      <ul class="palette__list" data-palette-list role="listbox"></ul>
+      <div class="palette__footer">
+        <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+        <span><kbd>↵</kbd> select</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast notifications -->
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <!-- Back to top progress ring -->
+  <button class="fab-top" type="button" data-fab-top aria-label="Back to top">
+    <svg class="fab-top__ring" viewBox="0 0 44 44" aria-hidden="true">
+      <circle class="fab-top__track" cx="22" cy="22" r="19" />
+      <circle class="fab-top__fill" cx="22" cy="22" r="19" data-fab-ring />
+    </svg>
+    <span class="fab-top__arrow" aria-hidden="true">↑</span>
+  </button>
+
+  <canvas class="confetti-canvas" data-confetti-canvas aria-hidden="true"></canvas>
 
   <div class="grain" aria-hidden="true"></div>
   <script src="js/main.js" defer></script>
